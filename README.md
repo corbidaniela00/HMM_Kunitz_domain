@@ -11,12 +11,12 @@ To overcome this limitation, a computational pipeline was developed to leverage 
 ## Project workflow
 
 ### 1. High-quality Kunitz structures were retrieved from UniProt and filtered using MMseqs2 to remove redundancy. 
-* Uniprot filters (output: sequences_for_clustering.fasta)
+* Uniprot filters (python code:`filter_PDB_sequences.py` output: `sequences_for_clustering.fasta`)
   * Pfam ID: PF00014
   * Resolution ≤ 3 Å
   * Sequence length between 50–70 residues
         
-* MMSEQ filters (output: seed_alignemet_input.fasta)
+* MMSEQ filters (python code: `select_one_seq_per_cluster.py` output: `seed_alignemet_input.fasta`)
   - sequence identity: 0.9
   - coverage: 0.8
           
