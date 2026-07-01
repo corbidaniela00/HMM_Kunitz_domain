@@ -1,14 +1,16 @@
 
 import requests
+from pathlib import Path
 
+current_file_path = Path(__file__).resolve() 
 
-input_list = r'C:\Users\Daniela\Desktop\Bioinformatics\Laboratory of Bioinformatics 1\MODULO 2\progetto\lista_pdb_3.txt'
-output_dir = r'C:\Users\Daniela\Desktop\Bioinformatics\Laboratory of Bioinformatics 1\MODULO 2\progetto\strutture selezionate_3'
+input_list = current_file_path.parent/'lista_pdb_3.txt'
+output_dir = current_file_path.parent/'strutture selezionate_3'
 
 def download_chain_directly(pdb_id, chain_id):
     
     filename = f"{pdb_id}_{chain_id}.pdb"
-    save_path = output_dir + "\\" +  filename
+    save_path = output_dir/filename
 
     url = f"https://files.rcsb.org/download/{pdb_id}.pdb"
     
