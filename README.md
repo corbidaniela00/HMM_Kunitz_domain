@@ -16,7 +16,7 @@ To overcome this limitation, a computational pipeline was developed to leverage 
   * Resolution ≤ 3 Å
   * Sequence length between 40–70 residues
         
-* MMSEQ filters (python code:`update_with_resolution_MMSEQ.py``select_one_seq_per_cluster.py` output: `seed_alignemet_input.fasta`)
+* MMSEQ filters (python code:`update_with_resolution_MMSEQ.py`, `select_one_seq_per_cluster.py` output: `seed_alignemet_input.fasta`)
   - sequence identity: 0.95
   - coverage: 0.85
           
