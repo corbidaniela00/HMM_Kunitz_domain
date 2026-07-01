@@ -14,11 +14,11 @@ To overcome this limitation, a computational pipeline was developed to leverage 
 * Uniprot filters (python code:`filter_PDB_sequences.py` output: `sequences_for_clustering.fasta`)
   * Pfam ID: PF00014
   * Resolution ≤ 3 Å
-  * Sequence length between 50–70 residues
+  * Sequence length between 40–70 residues
         
-* MMSEQ filters (python code: `select_one_seq_per_cluster.py` output: `seed_alignemet_input.fasta`)
-  - sequence identity: 0.9
-  - coverage: 0.8
+* MMSEQ filters (python code:`update_with_resolution_MMSEQ.py``select_one_seq_per_cluster.py` output: `seed_alignemet_input.fasta`)
+  - sequence identity: 0.95
+  - coverage: 0.85
           
 ### 2. Non-redundant domains were then aligned spatially via Foldseek to capture structural conservation independent of sequence identity. 
 
