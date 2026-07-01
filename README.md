@@ -31,7 +31,23 @@ after creating a CONDA environment with `hmmer` installed and having downloaded 
 - `zcat uniprotkb_reviewed_true_NOT_xref_pfam_P_2026_04_24.fasta.gz > negative_kunitz.fasta`
 - `hmmsearch --noali --max --tblout positive_kunitz.search -Z 1000 Kunitz_model.hmm positive_kunitz.fasta`
 - `hmmsearch --noali --max --tblout negative_kunitz.search -Z 1000 Kunitz_model.hmm negative_kunitz.fasta`
-- 
+I start by grouping and formatting the negative
+-  grep -v '^#' negative_kunitz.search |awk '{print $1"\t"$8"\t0"}' > negative_kuniz.match
+-  grep ">" negative_kunitz.fasta | awk '{print $1 }'| tr -d ">"|sort > negative_kunitz.ids
+-  awk '{print $1 }' negative_kunitz.match|sort > negative_kunitz_match.ids
+-  comm -23 negative_kunitz.ids negative_kunitz_match.ids | awk '{ print $1"\t"10"\t"0 }' > negative_kunitz.nomatch
+-  cat negative_kunitz.match negative_kunitz.nomatch |sort -R > negative_kunitz_tot.txt
+-  head -n 287115 negative_kunitz_tot.txt >> kunitz_set_1.txt
+-  tail -2 287114 negative_kunitz_tot.txt >> kunitz_set_2.txt
+I then start working with the positive  
+-  grep -v '^#' positive_kunitz.search |awk '{print $1"\t"$8"\t1"}' > positive_kuniz.match
+-  grep ">" positive_kunitz.fasta | awk '{print $1 }'| tr -d ">"|sort > positive_kunitz.ids
+-  awk '{print $1 }' positive_kunitz.match|sort > positive_kunitz_match.ids
+-  head -n 199 positive_kunitz.match > kunitz_set_1.txt
+-  tail -n 199 positive_kunitz.match > kunitz_set_2.txt
+
+### 4. Performances and Analysis of the results
+
 Finally, newly identified homologs were structurally validated using PDBeFold through RMSD and Q-score analysis.
 
 This workflow demonstrates how integrating structural biology with probabilistic sequence profiles significantly improves the sensitivity and accuracy of functional domain annotation.
