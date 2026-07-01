@@ -51,7 +51,7 @@ after creating a CONDA environment with `hmmer` installed and having downloaded 
   - `tail -n 199 positive_kunitz.match > kunitz_set_2.txt`
 
 ### 4. Performances and Analysis of the results
-- the performaces and the results were computed in the script `compute_performances.py`
+ the performaces and the results were computed in the script `compute_performances.py`,  where in particular I focused on the Matthew Correlation Coefficient, from which I calculated by applying the principle of *2-Fold Cross_validation* the confucion matrix and the graph of the ROC curve of the second set (kunitz_set_2.txt) using the threshold derived using the set 1 as Training and the viceversa, showing the threshold is the same, underlying the robustness of the model.
 
 Finally, newly identified homologs were structurally validated using PDBeFold through RMSD and Q-score analysis.
 
