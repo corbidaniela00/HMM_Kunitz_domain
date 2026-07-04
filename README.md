@@ -45,10 +45,10 @@ after creating a CONDA environment with `hmmer` installed and having downloaded 
 - I then start working with the positive:  
 
   - `grep -v '^#' positive_kunitz.search |awk '{print $1"\t"$8"\t1"}' > positive_kuniz.match`
-  - `grep ">" positive_kunitz.fasta | awk '{print $1 }'| tr -d ">"|sort > positive_kunitz.ids`
-  - `awk '{print $1 }' positive_kunitz.match|sort > positive_kunitz_match.ids`
-  - `head -n 199 positive_kunitz.match > kunitz_set_1.txt`
-  - `tail -n 199 positive_kunitz.match > kunitz_set_2.txt`
+  - `grep ">" positive_kunitz.fasta | awk '{print $1 }'| tr -d ">"|sort > positive_kunitz.ids` {è necessario?}
+  - `awk '{print $1 }' positive_kunitz.match|sort > positive_kunitz_match.ids` {è necessario?}
+  - `head -n 195 positive_kunitz.match > kunitz_set_1.txt`
+  - `tail -n 195 positive_kunitz.match > kunitz_set_2.txt`
 
 ### 4. Performances and Analysis of the results
  the performaces and the results were computed in the script `compute_performances.py`,  where in particular I focused on the Matthew Correlation Coefficient, from which I calculated by applying the principle of *2-Fold Cross_validation* the confucion matrix and the graph of the ROC curve of the second set (kunitz_set_2.txt) using the threshold derived using the set 1 as Training and the viceversa, showing the threshold is the same, underlying the robustness of the model.
