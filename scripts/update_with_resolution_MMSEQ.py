@@ -22,7 +22,7 @@ for line in lines:
         enriched_lines.append(line)
         continue
     
-    # Se la riga è un ID sequenza (es. >1AAL_A)
+    # Se la riga è un ID sequenza 
     if line.startswith(">"):
         header = line[1:] # Togliamo il '>'
         # Dividiamo PDB e Chain (es. 1AAL_A -> PDB: 1AAL, Chain: A)
@@ -33,19 +33,15 @@ for line in lines:
         
         # Cerchiamo i dati nel DataFrame df
         match = df[(df['pdb_id'] == pdb_id) & (df['chain'] == chain)]
-        #match non è un singolo valore, ma un "sotto-insieme" della tabella originale che contiene solo le righe corrispondenti a quella specifica combinazione PDB+Catena.
         
         if not match.empty:
+            #iloc[0] accede alla prima riga del df
             res = match.iloc[0]['resolution']
             seq = match.iloc[0]['sequence']
-            # Formattiamo la riga: >ID Sequenza Risoluzione
             enriched_lines.append(f">{header} {seq} {res}")
         else:
-            # Se per qualche motivo non lo trova nel df
             enriched_lines.append(f"{line} NOT_FOUND")
             
-    # Saltiamo le righe che contengono solo la sequenza "nuda" nel file cluster 
-    # perché la stiamo già aggiungendo accanto all'ID
     else:
         continue
 
