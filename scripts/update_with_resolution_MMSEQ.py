@@ -1,9 +1,11 @@
 import pandas as pd
+from pathlib import Path
 
-# 2. Leggiamo il file del clustering
-input_cluster_file = r'C:\Users\Daniela\Desktop\Bioinformatics\Laboratory of Bioinformatics 1\MODULO 2\progetto\mmseqs2_7719675_1.txt'
-output_enriched_file = r'C:\Users\Daniela\Desktop\Bioinformatics\Laboratory of Bioinformatics 1\MODULO 2\progetto\clusters_con_info.txt'
-csv_input = r'C:\Users\Daniela\Desktop\Bioinformatics\Laboratory of Bioinformatics 1\MODULO 2\progetto\dataset_pulito.csv'
+current_file_path = Path(__file__).resolve() 
+
+input_cluster_file = current_file_path.parent/'mmseqs2_7719675_1.txt'
+output_enriched_file = current_file_path.parent/'clusters_con_info.txt'
+csv_input = current_file_path.parent/'dataset_pulito.csv'
 
 df = pd.read_csv(csv_input)
 
