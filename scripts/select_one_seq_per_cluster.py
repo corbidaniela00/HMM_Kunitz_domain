@@ -21,12 +21,11 @@ with open(cluster_input, 'r') as f:
             clusters[current_cluster] = []
 
         elif line.startswith(">"):
-            # Dividiamo la riga per spazi
-            # Esempio: >3WNY_I RPAFCLE... 1.3
+            # >3WNY_I RPAFCLE... 1.3
             parts = line.split()
-            header = parts[0]      # >3WNY_I
-            sequence = parts[1]    # RPAFCLE...
-            res_value = float(parts[2]) # 1.3
+            header = parts[0]   
+            sequence = parts[1]
+            res_value = float(parts[2]) # resolution
             
             if res_value < current_best_res:
                 current_best_res = res_value
@@ -36,7 +35,7 @@ with open(cluster_input, 'r') as f:
 with open(output_fasta, 'w') as f:
     for c_id in clusters:
         vincitore = clusters[c_id]
-        if vincitore: # Controlliamo che il cluster non sia rimasto vuoto
+        if vincitore:
             header, seq = vincitore
             f.write(f"{header}\n{seq}\n")
 
