@@ -3,7 +3,7 @@ from pathlib import Path
 
 current_file_path = Path(__file__).resolve() 
 
-input_cluster_file = current_file_path.parent/'mmseqs2_7719675_1.txt'
+input_cluster_file = current_file_path.parent/'mmseqs2_2915909.txt'
 output_enriched_file = current_file_path.parent/'clusters_con_info.txt'
 csv_input = current_file_path.parent/'dataset_pulito.csv'
 
