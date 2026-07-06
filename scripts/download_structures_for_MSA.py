@@ -4,8 +4,8 @@ from pathlib import Path
 
 current_file_path = Path(__file__).resolve() 
 
-input_list = current_file_path.parent/'lista_pdb_3.txt'
-output_dir = current_file_path.parent/'strutture selezionate_3'
+input_list = current_file_path.parent/'lista_pdb.txt'
+output_dir = current_file_path.parent/'structures'
 
 def download_chain_directly(pdb_id, chain_id):
     
