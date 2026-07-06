@@ -103,8 +103,9 @@ Misclassified sequences were further examined via multiple structure alignment (
 - False positives are short, likely truncated fragments (TM-score = 0.355) that match only a single conserved cysteine motif, without the complete Kunitz fold.
 
 ##  Requirements
-- HMMER3 (hmmbuild, hmmsearch)
-- mTM-align for multiple structure alignment
-- MMseqs2 for sequence clustering
-- AliView for alignment visualization/manual curation
-- Python 3.x with numpy, matplotlib, seaborn, scikit-learn
+- HMMER3 (hmmbuild, hmmsearch) <http://hmmer.org>
+- mTM-align for multiple structure alignment <https://yanglab.qd.sdu.edu.cn/mTM-align/>
+- MMseqs2 for sequence clustering <https://mmseqs.com/>
+- UniProt ID Mapping for mapping PDB ID to UniProt ID and remove the ones used for training from the validation dataset <https://www.uniprot.org/id-mapping>
+- AliView for alignment visualization/manual curation <https://github.com/AliView/AliView>
+- Python 3.x with numpy, matplotlib, seaborn, scikit-learn `pip install pandas numpy matplotlib seaborn scikit-learn requests`
