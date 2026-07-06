@@ -92,9 +92,9 @@ after creating a CONDA environment with `hmmer` installed and having downloaded 
   - `tail -n 287114 negative_kunitz_tot.txt >> kunitz_set_2.txt`
 
 ### 4. Performances and error analysis
-Performance was computed with compute_performances.py (confusion matrices, MCC vs. E-value threshold) and performance_analisys.py (ROC curves, AUC), following standard 2-fold cross-validation: the threshold maximizing the Matthews Correlation Coefficient (MCC) on each training fold was applied to the corresponding held-out test fold.
+Performance was computed with `compute_performances.py` (confusion matrices, MCC vs. E-value threshold) and `performance_analisys.py` (ROC curves, AUC), following standard 2-fold cross-validation: the threshold maximizing the Matthews Correlation Coefficient (MCC) on each training fold was applied to the corresponding held-out test fold.
 
-Key results (see report for full details):
+**Key results (see report for full details):**
 - MCC ≥ 0.99 and AUC = 1.0000 on both folds, stable across a broad E-value threshold range (10⁻⁴ to 10⁻⁸)
 - Only 4 false negatives and 3 false positives across the entire validation set (574,619 sequences)
 
