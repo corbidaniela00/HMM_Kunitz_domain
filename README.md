@@ -22,6 +22,8 @@ To overcome this limitation was developed a computational pipeline that builds a
     #output of MMSSEQ
 │   ├── mmseqs2_2915909.txt
 │   ├── clusters_con_info.txt
+│   ├── seed_alignment_input.fasta
+│   ├──
 │   ├── raw/
 │   └── processed/
 ├── models/
@@ -37,12 +39,12 @@ To overcome this limitation was developed a computational pipeline that builds a
 ## Project workflow
 
 ### 1. High-quality Kunitz structures were retrieved from RCSB PDB and filtered using MMseqs2 to remove redundancy. 
-* Uniprot filters (python code:`filter_PDB_sequences.py` output:`dataset_pulito.csv`, `sequences_for_clustering.fasta`)
+* Uniprot filters (**python code:**`filter_PDB_sequences.py` **output:**`dataset_pulito.csv`, `sequences_for_clustering.fasta`)
   * Pfam ID: PF00014
   * Resolution ≤ 3 Å
   * Sequence length between 40–70 residues
         
-* MMSEQ filters (python code:`update_with_resolution_MMSEQ.py`, `select_one_seq_per_cluster.py` output:`clusters_con_info.txt`, `seed_alignemet_input.fasta`)
+* MMSEQ filters (**python code:**`update_with_resolution_MMSEQ.py`, `select_one_seq_per_cluster.py` **output:**`clusters_con_info.txt`, `seed_alignemet_input.fasta`)
   - sequence identity: 0.95
   - coverage: 0.85
           
