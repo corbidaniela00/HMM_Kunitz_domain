@@ -10,7 +10,7 @@ Due to deep evolutionary divergence, its primary sequence often falls into the "
 To overcome this limitation was developed a computational pipeline that builds a profile HMM directly from a multiple structure alignment of experimentally solved Kunitz-domain structures, rather than from a standard sequence alignment, and validates it against a large, curated Swiss-Prot dataset.
 
 ## Repository Structure
-.
+```text
 ├── data/
 │   ├── raw/
 │   └── processed/
