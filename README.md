@@ -14,9 +14,14 @@ To overcome this limitation was developed a computational pipeline that builds a
 ```yaml
 .
 ├── data/
-│   ├── rcsb_pdb_custom_report.json #used as input for filter_PDB_sequences.py
+    #used as input for filter_PDB_sequences.py
+│   ├── rcsb_pdb_custom_report.json 
 │   ├── dataset_pulito.csv
-│   ├── sequences_for_clustering.fasta #used as input for MMSEQ
+    #used as input for MMSEQ
+│   ├── sequences_for_clustering.fasta
+    #output of MMSSEQ
+│   ├── mmseqs2_2915909.txt
+│   ├── clusters_con_info.txt
 │   ├── raw/
 │   └── processed/
 ├── models/
