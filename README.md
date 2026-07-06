@@ -63,7 +63,7 @@ To overcome this limitation was developed a computational pipeline that builds a
   - coverage: 0.85
           
 ### 2. Non-redundant domains were then aligned spatially via mTM-align to capture structural conservation independent of sequence identity. 
-* it's necessary to download the sofware (yanglab.qd.sdu.edu.cn/mTM-align) in order to perform the alignement via: `./mTM-align -i lista_pdb.txt -o alignment_output`
+* perform the alignement via: `./mTM-align -i lista_pdb.txt -o result_full.fasta`
 *  manual refinement of alignement to reduce residual redundancy excluded 5NX1_D and 3Fp7_J, yielding a final set of 18 structures.
 
 ### 3. Structure-derived alignment used to train a custom Profile Hidden Markov Model (HMMER3), subsequently vaidated against Swiss-Prot database. 
