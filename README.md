@@ -14,12 +14,12 @@ To overcome this limitation was developed a computational pipeline that builds a
 ```yaml
 .
 ├── data/
-    #used as input for filter_PDB_sequences.py
+#used as input for filter_PDB_sequences.py
 │   ├── rcsb_pdb_custom_report.json 
 │   ├── dataset_pulito.csv
-    #used as input for MMSEQ
+#used as input for MMSEQ
 │   ├── sequences_for_clustering.fasta
-    #output of MMSSEQ
+#output of MMSSEQ
 │   ├── mmseqs2_2915909.txt
 │   ├── clusters_con_info.txt
 │   ├── seed_alignment_input.fasta
@@ -31,8 +31,13 @@ To overcome this limitation was developed a computational pipeline that builds a
 |   ├── PDB_chain_False_Positive.txt
 │   ├── cross_validation/
 |   |   ├── Kunitz_set_1.txt
-|   |   ├── Kunitz_set_2.txt
-│   └── processed/
+|   |   └── Kunitz_set_2.txt
+│   └── MSA/
+# alignement resulting after calling mTM-align
+|   |   ├── result_full.fasta
+|   |   ├── result_cleaned.fasta
+|   |   ├── result_FN.fasta
+|   |   └── result_FP.fasta
 ├── models/
 │   └── Kunitz_HMM.hmm
 ├── scripts/
@@ -42,8 +47,8 @@ To overcome this limitation was developed a computational pipeline that builds a
 |   ├── download_structures_for_MSA.py
 |   ├── compute_performances.py
 │   └── performance_analysis.py
-├── README.md
-└── requirements.txt
+└── README.md
+
 ```
 ## Project workflow
 
