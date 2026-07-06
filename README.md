@@ -23,7 +23,12 @@ To overcome this limitation was developed a computational pipeline that builds a
 │   ├── mmseqs2_2915909.txt
 │   ├── clusters_con_info.txt
 │   ├── seed_alignment_input.fasta
-│   ├──
+#used as input for download_structures_for_MSA.py
+│   ├── lista_pdb.txt
+# the following three files are used as input of mTM-align (the last 2 for the analisys of FP and FN)
+|   ├── lista_PDB_chain.txt
+|   ├── PDB_chain_False_Negatives.txt
+|   ├── PDB_chain_False_Positive.txt
 │   ├── raw/
 │   └── processed/
 ├── models/
@@ -32,7 +37,9 @@ To overcome this limitation was developed a computational pipeline that builds a
 │   ├── filter_PDB_sequences.py
 |   ├── update_with_resolution_MMSEQ.py
 |   ├── select_one_seq_per_cluster.py
-│   └── train_hmm.sh
+|   ├── download_structures_for_MSA.py
+|   ├── compute_performances.py
+│   └── performance_analysis.py
 ├── README.md
 └── requirements.txt
 ```
