@@ -23,7 +23,7 @@ To overcome this limitation was developed a computational pipeline that builds a
 │   └── train_hmm.sh
 ├── README.md
 └── requirements.txt
-
+```
 ## Project workflow
 
 ### 1. High-quality Kunitz structures were retrieved from RCSB PDB and filtered using MMseqs2 to remove redundancy. 
