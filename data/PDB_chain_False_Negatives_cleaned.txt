@@ -1,0 +1,5 @@
+1AAP_A.pdb
+AF-Q8WPG5-F1-model_v6.pdb
+AF-A0A1Q1NL17-F1-model_v6.pdb
+AF-D3GGZ8-F1-model_v6.pdb
+AF-O62247-F1-model_v6.pdb
