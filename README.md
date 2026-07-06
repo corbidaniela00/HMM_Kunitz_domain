@@ -20,7 +20,9 @@ To overcome this limitation, a computational pipeline was developed to leverage 
   - sequence identity: 0.95
   - coverage: 0.85
           
-### 2. Non-redundant domains were then aligned spatially via Foldseek to capture structural conservation independent of sequence identity. 
+### 2. Non-redundant domains were then aligned spatially via mTM-align to capture structural conservation independent of sequence identity. 
+* it's necessary to download the sofware (yanglab.qd.sdu.edu.cn/mTM-align) in order to perform the alignement via:
+*  
 
 
 ### 3. This structure-derived alignment was used as a seed to train a custom Profile Hidden Markov Model (HMMER3), which was subsequently deployed to screen the curated Swiss-Prot database. 
