@@ -29,7 +29,9 @@ To overcome this limitation was developed a computational pipeline that builds a
 |   ├── lista_PDB_chain.txt
 |   ├── PDB_chain_False_Negatives.txt
 |   ├── PDB_chain_False_Positive.txt
-│   ├── raw/
+│   ├── cross_validation/
+|   |   ├── Kunitz_set_1.txt
+|   |   ├── Kunitz_set_2.txt
 │   └── processed/
 ├── models/
 │   └── Kunitz_HMM.hmm
