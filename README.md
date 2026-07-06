@@ -19,7 +19,9 @@ To overcome this limitation was developed a computational pipeline that builds a
 ├── models/
 │   └── Kunitz_HMM.hmm
 ├── scripts/
-│   ├── align_structures.py
+│   ├── filter_PDB_sequences.py
+|   ├── update_with_resolution_MMSEQ.py
+|   ├── select_one_seq_per_cluster.py
 │   └── train_hmm.sh
 ├── README.md
 └── requirements.txt
